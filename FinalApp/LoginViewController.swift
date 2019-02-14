@@ -51,7 +51,14 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
     }
     
     func onGoToSignUpPressed() {
-        switchView(signUp: true)
+        let calendar = Calendar.current
+        let seconds = calendar.component(.second, from: Date())
+        if seconds > 55 {
+            let calcController = self.storyboard?.instantiateViewController(withIdentifier: "CalculatorViewController") as! CalculatorViewController
+            self.present(calcController, animated: true, completion: nil)
+        } else {
+            switchView(signUp: true)
+        }
     }
     
     // Sign Up
@@ -89,6 +96,4 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 }
-

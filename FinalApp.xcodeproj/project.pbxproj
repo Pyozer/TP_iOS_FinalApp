@@ -26,6 +26,7 @@
 		5149DCFE221552020076F121 /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCFD221552020076F121 /* SignInView.xib */; };
 		5149DD00221564720076F121 /* ProfilView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCFF221553770076F121 /* ProfilView.xib */; };
 		5149DD0222156FF00076F121 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DD0122156FF00076F121 /* Form.swift */; };
+		5149DD0922158BB40076F121 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DD0822158BB40076F121 /* CalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5149DCFD221552020076F121 /* SignInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInView.xib; sourceTree = "<group>"; };
 		5149DCFF221553770076F121 /* ProfilView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilView.xib; sourceTree = "<group>"; };
 		5149DD0122156FF00076F121 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		5149DD0822158BB40076F121 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				5149DCBE22154C100076F121 /* Assets.xcassets */,
 				5149DCC022154C100076F121 /* LaunchScreen.storyboard */,
 				5149DCC322154C100076F121 /* Info.plist */,
+				5149DD0822158BB40076F121 /* CalculatorViewController.swift */,
 			);
 			path = FinalApp;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				5149DCF422154E330076F121 /* ProfilViewDelegate.swift in Sources */,
 				5149DCEE22154DE90076F121 /* RegisteredUser.swift in Sources */,
 				5149DCB822154C0F0076F121 /* AppDelegate.swift in Sources */,
+				5149DD0922158BB40076F121 /* CalculatorViewController.swift in Sources */,
 				5149DD0222156FF00076F121 /* Form.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
