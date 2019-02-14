@@ -8,4 +8,7 @@
 
 protocol SignInViewDelegate {
     
+    func onSignInPressed()
+    func onGoToSignUpPressed()
+    
 }

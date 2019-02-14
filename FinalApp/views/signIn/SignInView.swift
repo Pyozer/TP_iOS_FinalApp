@@ -14,6 +14,8 @@ class SignInView: UIView {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var delegate: SignInViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -32,11 +34,11 @@ class SignInView: UIView {
     }
     
     @IBAction func onSignInPressed(_ sender: UIButton) {
-        
+        delegate?.onSignInPressed()
     }
 
-    @IBAction func onGoToLoginPressed(_ sender: UIButton) {
-        
+    @IBAction func onGoToRegisterPressed(_ sender: UIButton) {
+        delegate?.onGoToSignUpPressed()
     }
     
 }

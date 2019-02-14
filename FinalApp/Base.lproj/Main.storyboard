@@ -17,12 +17,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBU-3I-pZq" customClass="SignUpView" customModule="FinalApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-wD-a6K" customClass="SignInView" customModule="FinalApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0b7-wD-a6K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="45a-qj-Tnr"/>
+                            <constraint firstItem="eBU-3I-pZq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9N9-43-bG4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eBU-3I-pZq" secondAttribute="bottom" id="Sdu-Ud-XDg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eBU-3I-pZq" secondAttribute="trailing" id="Vx4-I2-t6M"/>
+                            <constraint firstItem="eBU-3I-pZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XYt-xI-9fD"/>
+                            <constraint firstItem="0b7-wD-a6K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ceL-Xm-Iv8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0b7-wD-a6K" secondAttribute="trailing" id="dWv-IJ-ihZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0b7-wD-a6K" secondAttribute="bottom" id="lIc-a4-1HI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="signInView" destination="0b7-wD-a6K" id="EUU-bz-2G4"/>
+                        <outlet property="signUpView" destination="eBU-3I-pZq" id="zN3-Ln-NIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
