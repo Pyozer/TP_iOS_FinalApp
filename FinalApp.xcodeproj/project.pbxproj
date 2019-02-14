@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5149DCB822154C0F0076F121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCB722154C0F0076F121 /* AppDelegate.swift */; };
-		5149DCBA22154C0F0076F121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCB922154C0F0076F121 /* ViewController.swift */; };
+		5149DCBA22154C0F0076F121 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCB922154C0F0076F121 /* LoginViewController.swift */; };
 		5149DCBD22154C0F0076F121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCBB22154C0F0076F121 /* Main.storyboard */; };
 		5149DCBF22154C100076F121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCBE22154C100076F121 /* Assets.xcassets */; };
 		5149DCC222154C100076F121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCC022154C100076F121 /* LaunchScreen.storyboard */; };
 		5149DCCD22154C100076F121 /* FinalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCCC22154C100076F121 /* FinalAppTests.swift */; };
 		5149DCD822154C100076F121 /* FinalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCD722154C100076F121 /* FinalAppUITests.swift */; };
+		5149DCE622154D3F0076F121 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCE522154D3F0076F121 /* SignInView.swift */; };
+		5149DCE822154D8E0076F121 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCE722154D8E0076F121 /* SignUpView.swift */; };
+		5149DCEA22154DAC0076F121 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCE922154DAC0076F121 /* ProfilView.swift */; };
+		5149DCEC22154DC80076F121 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCEB22154DC80076F121 /* User.swift */; };
+		5149DCEE22154DE90076F121 /* RegisteredUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCED22154DE90076F121 /* RegisteredUser.swift */; };
+		5149DCF022154E060076F121 /* SignInViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCEF22154E060076F121 /* SignInViewDelegate.swift */; };
+		5149DCF222154E1C0076F121 /* SignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCF122154E1C0076F121 /* SignUpViewDelegate.swift */; };
+		5149DCF422154E330076F121 /* ProfilViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCF322154E330076F121 /* ProfilViewDelegate.swift */; };
+		5149DCF622154E550076F121 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCF522154E550076F121 /* SignUpView.xib */; };
+		5149DCFE221552020076F121 /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCFD221552020076F121 /* SignInView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		5149DCB422154C0F0076F121 /* FinalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5149DCB722154C0F0076F121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5149DCB922154C0F0076F121 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5149DCB922154C0F0076F121 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5149DCBC22154C0F0076F121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5149DCBE22154C100076F121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5149DCC122154C100076F121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,17 @@
 		5149DCD322154C100076F121 /* FinalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5149DCD722154C100076F121 /* FinalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalAppUITests.swift; sourceTree = "<group>"; };
 		5149DCD922154C100076F121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5149DCE522154D3F0076F121 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		5149DCE722154D8E0076F121 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		5149DCE922154DAC0076F121 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		5149DCEB22154DC80076F121 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5149DCED22154DE90076F121 /* RegisteredUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredUser.swift; sourceTree = "<group>"; };
+		5149DCEF22154E060076F121 /* SignInViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewDelegate.swift; sourceTree = "<group>"; };
+		5149DCF122154E1C0076F121 /* SignUpViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewDelegate.swift; sourceTree = "<group>"; };
+		5149DCF322154E330076F121 /* ProfilViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewDelegate.swift; sourceTree = "<group>"; };
+		5149DCF522154E550076F121 /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		5149DCFD221552020076F121 /* SignInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInView.xib; sourceTree = "<group>"; };
+		5149DCFF221553770076F121 /* ProfilView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +118,11 @@
 		5149DCB622154C0F0076F121 /* FinalApp */ = {
 			isa = PBXGroup;
 			children = (
+				5149DCF922154E700076F121 /* views */,
+				5149DCF822154E670076F121 /* delegates */,
+				5149DCF722154E5D0076F121 /* models */,
 				5149DCB722154C0F0076F121 /* AppDelegate.swift */,
-				5149DCB922154C0F0076F121 /* ViewController.swift */,
+				5149DCB922154C0F0076F121 /* LoginViewController.swift */,
 				5149DCBB22154C0F0076F121 /* Main.storyboard */,
 				5149DCBE22154C100076F121 /* Assets.xcassets */,
 				5149DCC022154C100076F121 /* LaunchScreen.storyboard */,
@@ -123,6 +147,62 @@
 				5149DCD922154C100076F121 /* Info.plist */,
 			);
 			path = FinalAppUITests;
+			sourceTree = "<group>";
+		};
+		5149DCF722154E5D0076F121 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5149DCEB22154DC80076F121 /* User.swift */,
+				5149DCED22154DE90076F121 /* RegisteredUser.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		5149DCF822154E670076F121 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5149DCEF22154E060076F121 /* SignInViewDelegate.swift */,
+				5149DCF122154E1C0076F121 /* SignUpViewDelegate.swift */,
+				5149DCF322154E330076F121 /* ProfilViewDelegate.swift */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		5149DCF922154E700076F121 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5149DCFC22154EA00076F121 /* profilView */,
+				5149DCFB22154E980076F121 /* signUp */,
+				5149DCFA22154E8C0076F121 /* signIn */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5149DCFA22154E8C0076F121 /* signIn */ = {
+			isa = PBXGroup;
+			children = (
+				5149DCE522154D3F0076F121 /* SignInView.swift */,
+				5149DCFD221552020076F121 /* SignInView.xib */,
+			);
+			path = signIn;
+			sourceTree = "<group>";
+		};
+		5149DCFB22154E980076F121 /* signUp */ = {
+			isa = PBXGroup;
+			children = (
+				5149DCE722154D8E0076F121 /* SignUpView.swift */,
+				5149DCF522154E550076F121 /* SignUpView.xib */,
+			);
+			path = signUp;
+			sourceTree = "<group>";
+		};
+		5149DCFC22154EA00076F121 /* profilView */ = {
+			isa = PBXGroup;
+			children = (
+				5149DCE922154DAC0076F121 /* ProfilView.swift */,
+				5149DCFF221553770076F121 /* ProfilView.xib */,
+			);
+			path = profilView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5149DCF622154E550076F121 /* SignUpView.xib in Resources */,
 				5149DCC222154C100076F121 /* LaunchScreen.storyboard in Resources */,
 				5149DCBF22154C100076F121 /* Assets.xcassets in Resources */,
 				5149DCBD22154C0F0076F121 /* Main.storyboard in Resources */,
+				5149DCFE221552020076F121 /* SignInView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +338,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5149DCBA22154C0F0076F121 /* ViewController.swift in Sources */,
+				5149DCE822154D8E0076F121 /* SignUpView.swift in Sources */,
+				5149DCF022154E060076F121 /* SignInViewDelegate.swift in Sources */,
+				5149DCF222154E1C0076F121 /* SignUpViewDelegate.swift in Sources */,
+				5149DCEA22154DAC0076F121 /* ProfilView.swift in Sources */,
+				5149DCEC22154DC80076F121 /* User.swift in Sources */,
+				5149DCE622154D3F0076F121 /* SignInView.swift in Sources */,
+				5149DCBA22154C0F0076F121 /* LoginViewController.swift in Sources */,
+				5149DCF422154E330076F121 /* ProfilViewDelegate.swift in Sources */,
+				5149DCEE22154DE90076F121 /* RegisteredUser.swift in Sources */,
 				5149DCB822154C0F0076F121 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
