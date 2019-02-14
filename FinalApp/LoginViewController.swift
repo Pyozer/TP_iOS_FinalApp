@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         signInView.delegate = self
         profilView.delegate = self
         
-        showSignUp()
+        switchView(signUp: true)
     }
     
     private func switchView(signIn: Bool = false, signUp: Bool = false, profil: Bool = false) {
@@ -29,15 +29,8 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         profilView.isHidden = !profil
     }
     
-    private func showSignUp() {
-        switchView(signUp: true)
-    }
-
-    private func showSignIn() {
-        switchView(signIn: true)
-    }
-    
     private func showProfil() {
+        profilView.initView()
         switchView(profil: true)
     }
     
@@ -59,7 +52,7 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
     }
     
     func onGoToSignUpPressed() {
-        showSignUp()
+        switchView(signUp: true)
     }
     
     // Sign Up
@@ -68,14 +61,14 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
             let email = signUpView.emailField.text!
             let password = signUpView.passwordField.text!
             RegisteredUser.setUser(user: User(email: email, password: password))
-            print("Successful Sign Up", RegisteredUser.instance?.email)
+            print("Successful Sign Up")
             showProfil()
             signUpView.resetFields()
         }
     }
     
     func onGoToSignInPressed() {
-        showSignIn()
+        switchView(signIn: true)
     }
     
     // Profil View
@@ -84,14 +77,14 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         if profilView.validateFields() {
             let newPassword = profilView.newPasswordField.text!
             RegisteredUser.instance?.password = newPassword
-            print("Password successfully changed")
+            print("Password change is a success")
             profilView.resetFields()
             // TODO: Display message
         }
     }
     
     func onLogout() {
-        switchView(signIn: true, signUp: false, profil: false)
+        switchView(signIn: true)
     }
 
 }

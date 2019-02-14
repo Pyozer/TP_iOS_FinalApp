@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInView: UIView {
+class SignInView: UIView, Form {
     
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var emailField: UITextField!

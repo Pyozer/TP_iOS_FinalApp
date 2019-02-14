@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilView: UIView {
+class ProfilView: UIView, Form {
         
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var userEmail: UILabel!
@@ -32,6 +32,12 @@ class ProfilView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        initView()
+    }
+    
+    func initView() {
+        userEmail.text = RegisteredUser.instance?.email
     }
     
     func resetFields() {
@@ -57,7 +63,7 @@ class ProfilView: UIView {
         }
         
         if !_newPassword.isEmpty && !_confNewPassword.isEmpty && _newPassword != _confNewPassword {
-            print("Passwords not equals !")
+            print("Passwords are not matching")
             // TODO: Display message under confirmation new password field
             isOk = false
         }
@@ -66,6 +72,7 @@ class ProfilView: UIView {
     }
     
     @IBAction func onChangePasswordPressed(_ sender: UIButton) {
+        delegate?.onChangePassword()
     }
     
     @IBAction func onLogoutPressed(_ sender: UIButton) {
