@@ -42,11 +42,10 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
             
             let user: User? = RegisteredUser.instance
             if (user?.email ?? "") == email && (user?.password ?? "") == password {
-                print("Successful Sign In")
                 signInView.resetFields()
                 showProfil()
             } else {
-                print("Login failed !")
+                showAlert("Error !", "Invalid credentials.")
             }
         }
     }
@@ -61,7 +60,6 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
             let email = signUpView.emailField.text!
             let password = signUpView.passwordField.text!
             RegisteredUser.setUser(user: User(email: email, password: password))
-            print("Successful Sign Up")
             showProfil()
             signUpView.resetFields()
         }
@@ -77,14 +75,19 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         if profilView.validateFields() {
             let newPassword = profilView.newPasswordField.text!
             RegisteredUser.instance?.password = newPassword
-            print("Password change is a success")
+            showAlert("Success !", "Password change is a success")
             profilView.resetFields()
-            // TODO: Display message
         }
     }
     
     func onLogout() {
         switchView(signIn: true)
+    }
+    
+    func showAlert(_ title: String, _ message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }

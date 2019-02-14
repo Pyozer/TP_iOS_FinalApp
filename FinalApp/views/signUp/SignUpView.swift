@@ -11,9 +11,15 @@ import UIKit
 class SignUpView: UIView, Form {
     
     @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var emailError: UILabel!
+    
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var passwordError: UILabel!
+    
     @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var confirmPasswordError: UILabel!
     
     var delegate: SignUpViewDelegate?
     
@@ -32,35 +38,46 @@ class SignUpView: UIView, Form {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        resetFields()
     }
     
     func resetFields() {
         emailField.text = ""
         passwordField.text = ""
         confirmPasswordField.text = ""
+        resetErrors()
+    }
+    
+    func resetErrors() {
+        emailError.text = ""
+        passwordError.text = ""
+        confirmPasswordError.text = ""
     }
     
     func validateFields() -> Bool {
         var isOk: Bool = true
+        resetErrors()
         
         let _email = emailField.text ?? ""
         if _email.isEmpty {
-            print("Email empty !")
-            // TODO: Display message under email field
+            emailError.text = "Email empty !"
             isOk = false
         }
         
         let _password = passwordField.text ?? ""
         if _password.isEmpty {
-            print("Password empty !")
-            // TODO: Display message under password field
+            passwordError.text = "Password empty !"
             isOk = false
         }
         
         let _confPassword = confirmPasswordField.text ?? ""
         if _confPassword.isEmpty {
-            print("Confirmation Password empty !")
-            // TODO: Display message under confirmation password field
+            confirmPasswordError.text = "Confirmation Password empty !"
+            isOk = false
+        }
+        
+        if isOk && _password != _confPassword {
+            confirmPasswordError.text = "Passwords are not matching"
             isOk = false
         }
         

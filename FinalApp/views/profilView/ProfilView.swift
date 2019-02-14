@@ -12,8 +12,12 @@ class ProfilView: UIView, Form {
         
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var userEmail: UILabel!
+    
     @IBOutlet weak var newPasswordField: UITextField!
+    @IBOutlet weak var passwordError: UILabel!
+    
     @IBOutlet weak var confirmNewPasswordField: UITextField!
+    @IBOutlet weak var confirmPasswordError: UILabel!
     
     var delegate: ProfilViewDelegate?
     
@@ -32,39 +36,43 @@ class ProfilView: UIView, Form {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
         initView()
     }
     
     func initView() {
         userEmail.text = RegisteredUser.instance?.email
+        resetFields()
     }
     
     func resetFields() {
         newPasswordField.text = ""
         confirmNewPasswordField.text = ""
+        resetErrors()
+    }
+    
+    func resetErrors() {
+        passwordError.text = ""
+        confirmPasswordError.text = ""
     }
     
     func validateFields() -> Bool {
         var isOk: Bool = true
+        resetErrors()
         
         let _newPassword = newPasswordField.text ?? ""
         if _newPassword.isEmpty {
-            print("New Password empty !")
-            // TODO: Display message under new password field
+            passwordError.text = "New Password empty !"
             isOk = false
         }
         
         let _confNewPassword = confirmNewPasswordField.text ?? ""
         if _confNewPassword.isEmpty {
-            print("Confirmation New Password empty !")
-            // TODO: Display message under confirmation new password field
+             confirmPasswordError.text = "Confirmation New Password empty !"
             isOk = false
         }
         
-        if !_newPassword.isEmpty && !_confNewPassword.isEmpty && _newPassword != _confNewPassword {
-            print("Passwords are not matching")
-            // TODO: Display message under confirmation new password field
+        if isOk && _newPassword != _confNewPassword {
+            confirmPasswordError.text = "Passwords are not matching"
             isOk = false
         }
         

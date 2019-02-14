@@ -11,8 +11,13 @@ import UIKit
 class SignInView: UIView, Form {
     
     @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var emailError: UILabel!
+    
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var passwordError: UILabel!
+    
     
     var delegate: SignInViewDelegate?
     
@@ -31,11 +36,18 @@ class SignInView: UIView, Form {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        resetFields()
     }
     
     func resetFields() {
         emailField.text = ""
         passwordField.text = ""
+        resetErrors()
+    }
+    
+    func resetErrors() {
+        emailError.text = ""
+        passwordError.text = ""
     }
     
     func validateFields() -> Bool {
@@ -43,15 +55,13 @@ class SignInView: UIView, Form {
         
         let _email : String = emailField.text ?? ""
         if _email.isEmpty {
-            print("Email empty !")
-            // TODO: Display message under email field
+            emailError.text = "Email empty !"
             isOk = false
         }
         
         let _password = passwordField.text ?? ""
         if _password.isEmpty {
-            print("Password empty !")
-            // TODO: Display message under password field
+            passwordError.text = "Password empty !"
             isOk = false
         }
         

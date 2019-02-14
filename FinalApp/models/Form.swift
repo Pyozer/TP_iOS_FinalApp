@@ -8,5 +8,6 @@
 
 protocol Form {
     func resetFields()
+    func resetErrors()
     func validateFields() -> Bool
 }
