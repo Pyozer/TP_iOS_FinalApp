@@ -57,6 +57,9 @@ class SignInView: UIView, Form {
         if _email.isEmpty {
             emailError.text = "Email empty !"
             isOk = false
+        } else if !_email.isValidEmail() {
+            emailError.text = "Email incorrect format !"
+            isOk = false
         }
         
         let _password = passwordField.text ?? ""
