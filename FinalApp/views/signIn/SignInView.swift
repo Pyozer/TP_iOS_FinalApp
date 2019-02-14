@@ -33,6 +33,31 @@ class SignInView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
+    func resetFields() {
+        emailField.text = ""
+        passwordField.text = ""
+    }
+    
+    func validateFields() -> Bool {
+        var isOk : Bool = true
+        
+        let _email : String = emailField.text ?? ""
+        if _email.isEmpty {
+            print("Email empty !")
+            // TODO: Display message under email field
+            isOk = false
+        }
+        
+        let _password = passwordField.text ?? ""
+        if _password.isEmpty {
+            print("Password empty !")
+            // TODO: Display message under password field
+            isOk = false
+        }
+        
+        return isOk
+    }
+    
     @IBAction func onSignInPressed(_ sender: UIButton) {
         delegate?.onSignInPressed()
     }

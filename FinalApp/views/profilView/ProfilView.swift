@@ -15,6 +15,8 @@ class ProfilView: UIView {
     @IBOutlet weak var newPasswordField: UITextField!
     @IBOutlet weak var confirmNewPasswordField: UITextField!
     
+    var delegate: ProfilViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -31,10 +33,42 @@ class ProfilView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    @IBAction func onChangePasswordPressed(sender: UIButton) {
-        
+    
+    func resetFields() {
+        newPasswordField.text = ""
+        confirmNewPasswordField.text = ""
     }
     
-    @IBAction func onLogoutPressed(sender: UIButton) {
+    func validateFields() -> Bool {
+        var isOk: Bool = true
+        
+        let _newPassword = newPasswordField.text ?? ""
+        if _newPassword.isEmpty {
+            print("New Password empty !")
+            // TODO: Display message under new password field
+            isOk = false
+        }
+        
+        let _confNewPassword = confirmNewPasswordField.text ?? ""
+        if _confNewPassword.isEmpty {
+            print("Confirmation New Password empty !")
+            // TODO: Display message under confirmation new password field
+            isOk = false
+        }
+        
+        if !_newPassword.isEmpty && !_confNewPassword.isEmpty && _newPassword != _confNewPassword {
+            print("Passwords not equals !")
+            // TODO: Display message under confirmation new password field
+            isOk = false
+        }
+        
+        return isOk
+    }
+    
+    @IBAction func onChangePasswordPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func onLogoutPressed(_ sender: UIButton) {
+        delegate?.onLogout()
     }
 }

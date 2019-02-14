@@ -8,8 +8,8 @@
 
 class User {
     
-    let email: String
-    let password: String
+    var email: String
+    var password: String
     
     init(email: String, password: String) {
         self.email = email

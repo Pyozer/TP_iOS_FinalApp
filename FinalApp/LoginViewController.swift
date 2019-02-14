@@ -8,44 +8,53 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDelegate {
+class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDelegate, ProfilViewDelegate {
 
     @IBOutlet weak var signUpView: SignUpView!
     @IBOutlet weak var signInView: SignInView!
+    @IBOutlet weak var profilView: ProfilView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpView.delegate = self
         signInView.delegate = self
+        profilView.delegate = self
+        
         showSignUp()
     }
     
+    private func switchView(signIn: Bool = false, signUp: Bool = false, profil: Bool = false) {
+        signUpView.isHidden = !signUp
+        signInView.isHidden = !signIn
+        profilView.isHidden = !profil
+    }
+    
     private func showSignUp() {
-        signUpView.isHidden = false
-        signInView.isHidden = true
+        switchView(signUp: true)
     }
 
     private func showSignIn() {
-        signUpView.isHidden = true
-        signInView.isHidden = false
+        switchView(signIn: true)
+    }
+    
+    private func showProfil() {
+        switchView(profil: true)
     }
     
     // Sign In
     func onSignInPressed() {
-        let _email = signInView.emailField.text ?? ""
-        if _email.isEmpty {
-            print("Email empty !")
-            // TODO: Display message under email field
-        }
-        
-        let _password = signInView.passwordField.text ?? ""
-        if _password.isEmpty {
-            print("Password empty !")
-            // TODO: Display message under password field
-        }
-        if !_email.isEmpty && !_password.isEmpty {
-            RegisteredUser.setUser(user: User(email: _email, password: _password))
-            print("Successful Sign In")
+        if signInView.validateFields() {
+            let email = signInView.emailField.text!
+            let password = signInView.passwordField.text!
+            
+            let user: User? = RegisteredUser.instance
+            if (user?.email ?? "") == email && (user?.password ?? "") == password {
+                print("Successful Sign In")
+                signInView.resetFields()
+                showProfil()
+            } else {
+                print("Login failed !")
+            }
         }
     }
     
@@ -55,32 +64,13 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
     
     // Sign Up
     func onSignUpPressed() {
-        let _email = signUpView.emailField.text ?? ""
-        if _email.isEmpty {
-            print("Email empty !")
-            // TODO: Display message under email field
-        }
-        
-        let _password = signUpView.passwordField.text ?? ""
-        if _password.isEmpty {
-            print("Password empty !")
-            // TODO: Display message under password field
-        }
-        
-        let _confPassword = signUpView.confirmPasswordField.text ?? ""
-        if _confPassword.isEmpty {
-            print("Confirmation Password empty !")
-            // TODO: Display message under confirmation password field
-        }
-        
-        if !_password.isEmpty && !_confPassword.isEmpty && _password != _confPassword {
-            print("Passwords not equals !")
-            // TODO: Display message under confirmation password field
-        }
-        
-        if !_email.isEmpty && !_password.isEmpty && !_confPassword.isEmpty {
-            RegisteredUser.setUser(user: User(email: _email, password: _password))
-            print("Successful Sign Up")
+        if signUpView.validateFields() {
+            let email = signUpView.emailField.text!
+            let password = signUpView.passwordField.text!
+            RegisteredUser.setUser(user: User(email: email, password: password))
+            print("Successful Sign Up", RegisteredUser.instance?.email)
+            showProfil()
+            signUpView.resetFields()
         }
     }
     
@@ -88,6 +78,21 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         showSignIn()
     }
     
+    // Profil View
+    
+    func onChangePassword() {
+        if profilView.validateFields() {
+            let newPassword = profilView.newPasswordField.text!
+            RegisteredUser.instance?.password = newPassword
+            print("Password successfully changed")
+            profilView.resetFields()
+            // TODO: Display message
+        }
+    }
+    
+    func onLogout() {
+        switchView(signIn: true, signUp: false, profil: false)
+    }
 
 }
 

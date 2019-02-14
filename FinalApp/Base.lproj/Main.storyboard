@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtz-qL-blg" customClass="ProfilView" customModule="FinalApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBU-3I-pZq" customClass="SignUpView" customModule="FinalApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,8 +33,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jtz-qL-blg" secondAttribute="trailing" id="3uh-Bo-Trs"/>
                             <constraint firstItem="0b7-wD-a6K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="45a-qj-Tnr"/>
+                            <constraint firstItem="jtz-qL-blg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8e8-7A-as9"/>
                             <constraint firstItem="eBU-3I-pZq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9N9-43-bG4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jtz-qL-blg" secondAttribute="bottom" id="9Wn-V8-DKI"/>
+                            <constraint firstItem="jtz-qL-blg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A3B-L4-3Xu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eBU-3I-pZq" secondAttribute="bottom" id="Sdu-Ud-XDg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eBU-3I-pZq" secondAttribute="trailing" id="Vx4-I2-t6M"/>
                             <constraint firstItem="eBU-3I-pZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XYt-xI-9fD"/>
@@ -41,6 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="profilView" destination="jtz-qL-blg" id="H7m-hz-qme"/>
                         <outlet property="signInView" destination="0b7-wD-a6K" id="EUU-bz-2G4"/>
                         <outlet property="signUpView" destination="eBU-3I-pZq" id="zN3-Ln-NIc"/>
                     </connections>

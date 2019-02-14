@@ -34,6 +34,39 @@ class SignUpView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
+    func resetFields() {
+        emailField.text = ""
+        passwordField.text = ""
+        confirmPasswordField.text = ""
+    }
+    
+    func validateFields() -> Bool {
+        var isOk: Bool = true
+        
+        let _email = emailField.text ?? ""
+        if _email.isEmpty {
+            print("Email empty !")
+            // TODO: Display message under email field
+            isOk = false
+        }
+        
+        let _password = passwordField.text ?? ""
+        if _password.isEmpty {
+            print("Password empty !")
+            // TODO: Display message under password field
+            isOk = false
+        }
+        
+        let _confPassword = confirmPasswordField.text ?? ""
+        if _confPassword.isEmpty {
+            print("Confirmation Password empty !")
+            // TODO: Display message under confirmation password field
+            isOk = false
+        }
+        
+        return isOk
+    }
+    
     @IBAction func onSignUpPressed(_ sender: UIButton) {
         delegate?.onSignUpPressed()
     }

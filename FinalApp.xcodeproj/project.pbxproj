@@ -24,6 +24,7 @@
 		5149DCF422154E330076F121 /* ProfilViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149DCF322154E330076F121 /* ProfilViewDelegate.swift */; };
 		5149DCF622154E550076F121 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCF522154E550076F121 /* SignUpView.xib */; };
 		5149DCFE221552020076F121 /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCFD221552020076F121 /* SignInView.xib */; };
+		5149DD00221564720076F121 /* ProfilView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5149DCFF221553770076F121 /* ProfilView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5149DD00221564720076F121 /* ProfilView.xib in Resources */,
 				5149DCF622154E550076F121 /* SignUpView.xib in Resources */,
 				5149DCC222154C100076F121 /* LaunchScreen.storyboard in Resources */,
 				5149DCBF22154C100076F121 /* Assets.xcassets in Resources */,
