@@ -14,7 +14,7 @@ Bonus done:
 - Display Alert when login success
 - Add calculator easter egg (on press "Go to register" and seconds is after 50, ex between: 16h23:50 and 16h23:59)
 
-During this project I also made a (Snake Game)[https://github.com/Pyozer/Swift-Snake-Game] (also in Swift).
+During this project I also made a [Snake Game](https://github.com/Pyozer/Swift-Snake-Game) (also in Swift).
 When you press "Play button" on ProfilView, the game is open (if it is already installed).
 
 
