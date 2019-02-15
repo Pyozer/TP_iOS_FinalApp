@@ -21,10 +21,10 @@ When you press "Play button" on ProfilView, the game is open (if it is already i
 ## Screenshots
 
 
-<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signIn.png" width="300" alt="Sign In View" style="float: left;margin-right: 16px;">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signIn.png" width="300" alt="Sign In View" align="left" hspace="16">
 
 
-<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signUp.png" width="300" alt="Sign Up View" style="float: left;margin-right: 16px;">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signUp.png" width="300" alt="Sign Up View" align="left" hspace="16">
 
 
-<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/profil.png" width="300" alt="Profil View" style="float: left;margin-right: 16px;">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/profil.png" width="300" alt="Profil View" align="left" hspace="16">
