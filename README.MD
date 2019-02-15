@@ -18,12 +18,13 @@ Bonus done:
 During this project I also made a [Snake Game](https://github.com/Pyozer/Swift-Snake-Game) (also in Swift).
 When you press "Play button" on ProfilView, the game is open (if it is already installed).
 
-## Screenshots:
-
-<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signIn.png" width="300" alt="Sign In View">
+## Screenshots
 
 
-<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signUp.png" width="300" alt="Sign Up View">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signIn.png" width="300" alt="Sign In View" style="float: left;margin-right: 16px;">
 
 
-<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/profil.png" width="300" alt="Profil View">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signUp.png" width="300" alt="Sign Up View" style="float: left;margin-right: 16px;">
+
+
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/profil.png" width="300" alt="Profil View" style="float: left;margin-right: 16px;">
