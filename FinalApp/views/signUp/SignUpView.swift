@@ -68,8 +68,8 @@ class SignUpView: UIView, Form {
         }
         
         let _password = passwordField.text ?? ""
-        if _password.isEmpty {
-            passwordError.text = "Password empty !"
+        if _password.count < 6 {
+            passwordError.text = "Password must have 6 or more characters !"
             isOk = false
         }
         

@@ -67,7 +67,7 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
             let email = signUpView.emailField.text!
             let password = signUpView.passwordField.text!
             RegisteredUser.setUser(user: User(email: email, password: password))
-            showProfil()
+            switchView(signIn: true, signUp: false, profil: false)
             signUpView.resetFields()
         }
     }

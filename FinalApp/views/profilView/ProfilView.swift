@@ -62,8 +62,8 @@ class ProfilView: UIView, Form {
         resetErrors()
         
         let _newPassword = newPasswordField.text ?? ""
-        if _newPassword.isEmpty {
-            passwordError.text = "New Password empty !"
+        if _newPassword.count < 6 {
+            passwordError.text = "New Password must have 6 or more characters !"
             isOk = false
         }
         
