@@ -8,6 +8,7 @@ The goal is to made an app with a Login, Register and Profil screen.
 Some design pattern has been implemented, like Delegate and Singleton.
 
 Bonus done:
+
 - Email format validation
 - Password length, minimum 6 characters
 - Display error messages under textfields
@@ -18,4 +19,8 @@ During this project I also made a [Snake Game](https://github.com/Pyozer/Swift-S
 When you press "Play button" on ProfilView, the game is open (if it is already installed).
 
 
-Screenshot: **WIP**
+Screenshot:
+
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signIn.png" height="400" alt="Sign In View">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/signUp.png" height="400" alt="Sign Up View">
+<img src="https://raw.githubusercontent.com/Pyozer/TP_iOS_FinalApp/master/screenshots/profil.png" height="400" alt="Profil View">
