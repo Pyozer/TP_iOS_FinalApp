@@ -91,6 +91,19 @@ class LoginViewController: UIViewController, SignInViewDelegate, SignUpViewDeleg
         switchView(signIn: true)
     }
     
+    func onPlaySnake() {
+        let customURL = URL(string: "snakegameschool://")!
+        if UIApplication.shared.canOpenURL(customURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(customURL)
+            } else {
+                UIApplication.shared.openURL(customURL)
+            }
+        } else {
+            showAlert("App missing", "Snake Game is not installed !")
+        }
+    }
+    
     func showAlert(_ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

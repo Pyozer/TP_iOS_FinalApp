@@ -10,5 +10,6 @@ protocol ProfilViewDelegate {
     
     func onChangePassword()
     func onLogout()
+    func onPlaySnake()
     
 }

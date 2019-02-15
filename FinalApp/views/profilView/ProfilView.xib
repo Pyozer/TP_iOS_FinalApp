@@ -110,15 +110,30 @@
                         <action selector="onChangePasswordPressed:" destination="-1" eventType="touchUpInside" id="pxJ-5q-PWH"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRb-wy-3mD">
+                    <rect key="frame" x="16" y="481.5" width="343" height="50"/>
+                    <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="B43-JJ-lbZ"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Play Snake Game"/>
+                    <connections>
+                        <action selector="onPlaySnake:" destination="-1" eventType="touchUpInside" id="c6V-u1-N6E"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hUO-uy-TI4" secondAttribute="trailing" constant="16" id="6Pj-Ia-Dm9"/>
                 <constraint firstItem="UYy-QB-cZY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="9jP-cL-UdI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CRb-wy-3mD" secondAttribute="trailing" constant="16" id="CZ6-XV-e67"/>
                 <constraint firstItem="Ulg-p0-uo2" firstAttribute="trailing" secondItem="ybr-zb-LO4" secondAttribute="trailing" id="G0z-7p-l6U"/>
                 <constraint firstItem="cqy-uL-6OR" firstAttribute="trailing" secondItem="ybr-zb-LO4" secondAttribute="trailing" id="Gic-nB-8ZO"/>
+                <constraint firstItem="CRb-wy-3mD" firstAttribute="top" secondItem="hUO-uy-TI4" secondAttribute="bottom" constant="24" id="Jf3-OL-uC0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5RN-XV-UzX" secondAttribute="trailing" constant="16" id="Lxt-tx-x1a"/>
                 <constraint firstItem="cqy-uL-6OR" firstAttribute="top" secondItem="i4F-TT-J2b" secondAttribute="bottom" constant="32.5" id="M8S-iJ-sKn"/>
+                <constraint firstItem="CRb-wy-3mD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="MFv-1z-KhF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="i4F-TT-J2b" secondAttribute="trailing" constant="16" id="PC6-5A-j3t"/>
                 <constraint firstItem="8Q7-sD-Axk" firstAttribute="leading" secondItem="UKs-ar-vz6" secondAttribute="leading" id="PRz-Xe-tBM"/>
                 <constraint firstItem="UKs-ar-vz6" firstAttribute="top" secondItem="8Q7-sD-Axk" secondAttribute="bottom" constant="8" id="S7V-rh-eiw"/>

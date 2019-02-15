@@ -19,6 +19,8 @@ class ProfilView: UIView, Form {
     @IBOutlet weak var confirmNewPasswordField: UITextField!
     @IBOutlet weak var confirmPasswordError: UILabel!
     
+    @IBOutlet weak var playSnake: UIButton!
+
     var delegate: ProfilViewDelegate?
     
     override init(frame: CGRect) {
@@ -86,4 +88,9 @@ class ProfilView: UIView, Form {
     @IBAction func onLogoutPressed(_ sender: UIButton) {
         delegate?.onLogout()
     }
+    
+    @IBAction func onPlaySnake(_ sender: UIButton) {
+        delegate?.onPlaySnake()
+    }
+    
 }
